@@ -669,7 +669,6 @@ function! s:create_xline_context() abort
         \   'col_base': col_base,
         \   'col_tabfill': col_base,
         \   'col_edge': col_edge,
-        \   'col_normal': col_edge,
         \   'col_tabsel': col_edge,
         \   'col_error': string([
         \     g.normal_bg,
@@ -695,23 +694,33 @@ function! s:create_xline_context() abort
         \     c.normal_bg,
         \     c.orange,
         \   ]),
+        \   'col_normal': string([
+        \     g.xline_edge_fg,
+        \     g.xline_edge_bg,
+        \     c.xline_edge_fg,
+        \     c.xline_edge_bg,
+        \     "bold",
+        \   ]),
         \   'col_insert': string([
         \     g.normal_bg,
         \     g.blue,
         \     c.normal_bg,
         \     c.blue,
+        \     "bold",
         \   ]),
         \   'col_replace': string([
         \     g.normal_bg,
         \     g.orange,
         \     c.normal_bg,
         \     c.orange,
+        \     "bold",
         \   ]),
         \   'col_visual': string([
         \     g.normal_bg,
         \     g.green,
         \     c.normal_bg,
         \     c.green,
+        \     "bold",
         \   ]),
         \   'col_red': string([
         \     g.red,
